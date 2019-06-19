@@ -93,12 +93,6 @@ mod_RF2 <- randomForest(as.factor(biomes)~temperature+precipitation+wet_quarter,
 mod_RF3 <- randomForest(as.factor(biomes)~temperature+precipitation+dry_quarter,data=RF_data,ntree=500)
 
 
-?randomForest
-print(mod_RF)
-importance(mod_RF)
-varImpPlot(mod_RF)
-names(mod_RF)
-
 #1 = Tropical moist forests
 #4 = Temperate forests
 #7 = Cerrado (savanna)
@@ -119,8 +113,6 @@ print(rules)
 plot(mod_RF$forest$treemap)
 
 to.dendrogram(tree)
-
-?randomForest
 
 
 ### Model prediction data
